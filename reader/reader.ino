@@ -31,14 +31,14 @@ void setup() {
   Serial.begin(115200);
   pinMode(sensorPin, INPUT);
 
-  Serial.println("Calibrating passive, relax the sensor...");
+  Serial.println("> Calibrating passive, relax the sensor...");
   delay(calibrationDelay);
-  Serial.println("Calibration started.");
+  Serial.println("> Calibration started.");
   passiveBase = averagedRead(sensorPin, calibrationNumReads, calibrationReadSpacing);
 
-  Serial.println("Calibrating active, use the sensor...");
+  Serial.println("> Calibrating active, use the sensor...");
   delay(calibrationDelay);
-  Serial.println("Calibration started.");
+  Serial.println("> Calibration started.");
   activeBase = averagedRead(sensorPin, calibrationNumReads, calibrationReadSpacing);
 
 }
